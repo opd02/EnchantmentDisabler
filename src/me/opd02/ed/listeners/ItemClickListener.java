@@ -65,7 +65,7 @@ public class ItemClickListener implements Listener {
 			ConfigUtilsEN.syncHashMapWithConfig(plugin);
 		}
 		
-		if(e.getClickedInventory().equals(null)){
+		if(e.getClickedInventory()==null){
 			return;
 		}
 		

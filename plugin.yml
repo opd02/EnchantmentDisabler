@@ -1,6 +1,6 @@
 name: EnchantmentDisabler
 author: opd02
-version: 0.1.2
+version: 0.1.3
 api-version: 1.13
 main: me.opd02.ed.EnchantmentDisablerPlugin
 commands:
