@@ -65,6 +65,10 @@ public class ItemClickListener implements Listener {
 			ConfigUtilsEN.syncHashMapWithConfig(plugin);
 		}
 		
+		if(e.getClickedInventory().equals(null)){
+			return;
+		}
+		
 	if(e.getClickedInventory().getType().equals(InventoryType.MERCHANT)){
 		if(e.getCurrentItem().getType().equals(Material.ENCHANTED_BOOK)){
 			EnchantmentStorageMeta em = (EnchantmentStorageMeta) e.getCurrentItem().getItemMeta();
