@@ -26,9 +26,12 @@ public class EnchantmentDisablerPlugin extends JavaPlugin {
 		Bukkit.getServer().getPluginManager().registerEvents(new PrepareItemEnchantListener(), this);
 		Bukkit.getServer().getPluginManager().registerEvents(new ItemClickListener(this), this);
 		Bukkit.getServer().getPluginManager().registerEvents(new EnchantItemListener(), this);
-		Bukkit.getServer().getPluginManager().registerEvents(new InventoryOpenListener(), this);
-		Bukkit.getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
-		Bukkit.getServer().getPluginManager().registerEvents(new EntityPickupItemListener(), this);
+		
+		if(this.getConfig().getBoolean("PurgeExistingDisabledEnchantedItemsToo") == true) {
+			Bukkit.getServer().getPluginManager().registerEvents(new InventoryOpenListener(), this);
+			Bukkit.getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+			Bukkit.getServer().getPluginManager().registerEvents(new EntityPickupItemListener(), this);	
+		}
 		
 		
 		EnchantmentDisablerPlugin.blockedEnchants = new HashMap<Enchantment, Boolean>();

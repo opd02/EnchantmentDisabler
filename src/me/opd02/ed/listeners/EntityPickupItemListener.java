@@ -12,6 +12,9 @@ public class EntityPickupItemListener implements Listener {
 
 	@EventHandler
 	public void onItemPickUp(EntityPickupItemEvent e){
+		
+		
+		
 		ItemStack i = e.getItem().getItemStack();
 		
 		for(Enchantment en : i.getEnchantments().keySet()){

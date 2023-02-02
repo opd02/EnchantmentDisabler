@@ -1,3 +1,4 @@
+PurgeExistingDisabledEnchantedItemsToo: true
 enchants:
   ARROW_DAMAGE: false
   ARROW_FIRE: false
